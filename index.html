@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driving License Renewal - Frontend Assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="renewal-page">
+      <h1 class="page-title">Driving License Renewal</h1>
+
+      <section class="renewal-card" aria-label="Driving license details form">
+        <div class="progress-shell" aria-hidden="true">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <header class="card-header">
+          <h2>Let's get started!</h2>
+          <p>Add your details (As per your registered records)</p>
+        </header>
+
+        <div class="screens-viewport">
+          <div class="screens-track" id="screensTrack">
+            <section class="screen" data-screen-index="0">
+              <div class="question" data-question data-question-type="text">
+                <label for="nameInput">Name</label>
+                <input
+                  id="nameInput"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Enter Name"
+                />
+              </div>
+
+              <div class="question" data-question data-question-type="radio">
+                <p class="group-label">Nature of Driving License</p>
+                <div class="radio-row">
+                  <label class="radio-pill">
+                    <input type="radio" name="licenseNature" value="private" />
+                    <span class="radio-dot" aria-hidden="true"></span>
+                    <span color: #383b3f32>Private</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input
+                      type="radio"
+                      name="licenseNature"
+                      value="commercial"
+                    />
+                    <span class="radio-dot" aria-hidden="true"></span>
+                    <span>Commercial</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="question" data-question data-question-type="radio">
+                <p class="group-label">Type of Previous Driving License</p>
+                <div class="radio-row">
+                  <label class="radio-pill">
+                    <input type="radio" name="previousType" value="paper" />
+                    <span class="radio-dot" aria-hidden="true"></span>
+                    <span>Paper Driving License</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="previousType" value="smart" />
+                    <span class="radio-dot" aria-hidden="true"></span>
+                    <span>Smart Driving License</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="back-button js-back" type="button">
+                  <span class="back-icon" aria-hidden="true">&#x2039;</span>
+                  Back
+                </button>
+              </div>
+            </section>
+
+            <section class="screen" data-screen-index="1">
+              <div class="question" data-question data-question-type="text">
+                <label for="placeInput">Place where Driving License was issued</label>
+                <input
+                  id="placeInput"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Enter Place Name"
+                />
+              </div>
+
+              <div class="question" data-question data-question-type="select">
+                <label for="issuedYear">Issued Year of License</label>
+                <div class="custom-select" data-select data-list-title="All Years">
+                  <select id="issuedYear">
+                    <option value="">Choose Issued Year of License</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="question" data-question data-question-type="select">
+                <label for="expiredYear">Type of Previous Driving License</label>
+                <div class="custom-select" data-select data-list-title="All Years">
+                  <select id="expiredYear">
+                    <option value="">Choose Expired Year of License</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="back-button js-back" type="button">
+                  <span class="back-icon" aria-hidden="true">&#x2039;</span>
+                  Back
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
